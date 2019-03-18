@@ -1,0 +1,81 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Mar 18 10:42:59 2019
+| Host         : jacoboffersen running 64-bit Ubuntu 18.04.2 LTS
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    12 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|    16+ |           11 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             412 |          150 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               4 |            1 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+---------------------------------------------------+----------------------------+------------------+----------------+
+|            Clock Signal           |                   Enable Signal                   |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++-----------------------------------+---------------------------------------------------+----------------------------+------------------+----------------+
+|  prescaler_reg[11]                | led_matrix0/row[5]_i_1_n_0                        | led_matrix0/row[7]_i_1_n_0 |                1 |              4 |
+|  prescaler_reg[11]                |                                                   |                            |                1 |              6 |
+|  led_matrix0/prescaler_reg__0[12] |                                                   |                            |                3 |              8 |
+|  clk_IBUF_BUFG                    |                                                   |                            |               10 |             23 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[47]_i_1_n_0 |                            |                8 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[55]_i_1_n_0 |                            |                8 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[63]_i_1_n_0 |                            |                6 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[7]_i_1_n_0  |                            |                9 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[23]_i_1_n_0 |                            |                9 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[15]_i_1_n_0 |                            |                7 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[31]_i_1_n_0 |                            |                9 |             24 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/values_red[39]_i_1_n_0 |                            |               12 |             24 |
+|  prescaler_reg[11]                | led_matrix0/row[5]_i_1_n_0                        |                            |               26 |             28 |
+|  clk_IBUF_BUFG                    | led_matrix0/mem_interface0/red[63]_i_1_n_0        |                            |               56 |            192 |
++-----------------------------------+---------------------------------------------------+----------------------------+------------------+----------------+
+
+

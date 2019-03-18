@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab3_3.ip_user_files/bd/LED_RAM/ip/LED_RAM_blk_mem_gen_0_0/sim/LED_RAM_blk_mem_gen_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
